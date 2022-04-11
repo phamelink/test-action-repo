@@ -1,5 +1,5 @@
 function main() {
-	console.log("Hello there"); // "singleQuote" error
+	console.log("Hello world"); // "singleQuote" error
 }
 
 main() // "semi" error
