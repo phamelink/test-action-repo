@@ -46,11 +46,14 @@ jobs:
 
       - name: Build action
         run: yarn build
+        
+      - name: Test
+        run: echo "Working"
 
       - name: Run linters
         uses: phamelink/lint-action@v1.13.0
         with:
-          continue_on_error: false
+          continue_on_error: true
           prettier: true
           auto_fix: true
           prettier_auto_fix: true
