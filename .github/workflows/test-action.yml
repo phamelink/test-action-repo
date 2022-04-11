@@ -48,7 +48,7 @@ jobs:
         run: yarn build
 
       - name: Run linters
-        uses: phamelink/lint-action@v1
+        uses: phamelink/lint-action@v1.13.0
         with:
           continue_on_error: false
           prettier: true
