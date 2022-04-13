@@ -36,11 +36,16 @@ jobs:
         with:
           node-version: 12
 
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
       - name: Install Node.js dependencies
         run: npm install
         
-      - name: Test
-        run: echo "Working"
+      - name: Install Python dependencies
+        run: pip install black flake8
 
       - name: Run linters
         uses: phamelink/lint-action@v1.13.0
@@ -48,6 +53,9 @@ jobs:
           continue_on_error: true
           prettier: true
           auto_fix: true
+          black: false
+          black_auto_fix: false
+          flake8: true
           prettier_auto_fix: false
           prettier_extensions: "css,html,js,json,jsx,less,md,scss,ts,tsx,vue,yaml,yml"
           neutral_check_on_warning: true
