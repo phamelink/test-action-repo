@@ -54,8 +54,9 @@ jobs:
           prettier: true
           auto_fix: true
           black: false
-          black_auto_fix: false
+          black_auto_fix: true
           flake8: true
+          flake8_auto_fix: false
           prettier_auto_fix: false
           prettier_extensions: "css,html,js,json,jsx,less,md,scss,ts,tsx,vue,yaml,yml"
           neutral_check_on_warning: true
